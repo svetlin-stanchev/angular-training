@@ -1,0 +1,24 @@
+{
+  "name": "angular-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svetlin-stanchev/angular-training.git"
+  },
+  "keywords": [],
+  "author": "svetlin.stanchev@mentormate.com",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.6.4",
+    "angular-ui-router": "0.4.2"
+  },
+  "devDependencies": {
+    "http-server": "0.10.0"
+  }
+}

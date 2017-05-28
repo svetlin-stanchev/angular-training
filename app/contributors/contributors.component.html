@@ -1,0 +1,10 @@
+<header>
+  <h4>{{$ctrl.repo.name}}</h4>
+  <div ng-transclude></div>
+</header>
+<main>
+  <div mm-background-image="{{$ctrl.repo.owner.avatar_url}}"></div>
+  <div class="contributors-wrapper">
+    <div ng-repeat="contr in $ctrl.contributors" mm-background-image="{{contr.avatar_url}}"></div>
+  </div>
+</main>

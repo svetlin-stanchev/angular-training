@@ -1,0 +1,7 @@
+<mm-header></mm-header>
+<main>  
+  <ui-view></ui-view>
+  <div class="repo-list">
+    <div class="repo" ng-repeat="repo in $ctrl.repos track by repo.id" ng-click="$ctrl.openRepoData(repo)">{{repo.name}}</div>
+  </div>
+</main>

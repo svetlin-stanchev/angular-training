@@ -1,0 +1,5 @@
+mm-header {
+  display: flex;
+  padding: 5px 10px;
+  box-shadow: 0 0 7px lightslategray;
+}

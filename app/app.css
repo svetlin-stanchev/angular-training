@@ -36,3 +36,19 @@ mm-app {
 .mm-app__list__item:hover {
   background-color: darkgray;
 }
+
+.mm-app__sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  width: 300px;
+  border-top: 1px solid lightslategray;
+  background: #fff;
+  transition: transform .3s ease-in;
+  box-shadow: 0 0 7px lightslategray;
+}
+
+.mm-app__sidebar--active {
+  transform: translate(-100%, 0);
+}

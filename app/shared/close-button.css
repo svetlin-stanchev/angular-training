@@ -1,0 +1,21 @@
+
+mm-close-button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  transition: transform .8s ease-in-out;
+}
+
+mm-close-button:hover {
+  transform: rotate(360deg);
+}
+
+.mm-close-button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}

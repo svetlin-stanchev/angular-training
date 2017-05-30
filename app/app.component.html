@@ -1,7 +1,2 @@
 <mm-header></mm-header>
-<main class="mm-app__main">
-  <div class="mm-app__sidebar" ng-class="{'mm-app__sidebar--active' : $ctrl.activeRepo}" ui-view></div>
-  <div class="mm-app__list">
-    <div class="mm-app__list__item" ng-repeat="repo in $ctrl.repos track by repo.id" ng-click="$ctrl.openRepoData(repo)">{{repo.name}}</div>
-  </div>
-</main>
+<main class="mm-app__main" ui-view></main>

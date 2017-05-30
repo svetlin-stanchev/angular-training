@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('MMApp')
+  angular.module('MMApp.repos')
     .factory('RepoModel', RepoModel);
 
   /* @ngInject */

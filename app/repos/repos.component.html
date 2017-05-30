@@ -1,0 +1,4 @@
+<div class="mm-repos__list">
+  <div class="mm-repos__list__item" ng-repeat="repo in $ctrl.repos track by repo.id" ng-click="$ctrl.openRepoData(repo)">{{repo.name}}</div>
+</div>
+<div class="mm-repos__sidebar" ng-class="{'mm-repos__sidebar--active' : $ctrl.activeRepo}" ui-view></div>

@@ -1,28 +1,11 @@
-html, body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-
-mm-app {
-  display: block;
-  height: 100%;
-}
-
-.mm-app__main {
-  position: relative;
-  height: calc(100% - 46px);
-  overflow: hidden;
-}
-
-.mm-app__list {
+.mm-repos__list {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
   margin: 0;
 }
 
-.mm-app__list__item {
+.mm-repos__list__item {
   min-width: 200px;
   max-width: 200px;
   min-height: 50px;
@@ -33,11 +16,11 @@ mm-app {
   transition: background-color .3s ease-in;
 }
 
-.mm-app__list__item:hover {
+.mm-repos__list__item:hover {
   background-color: darkgray;
 }
 
-.mm-app__sidebar {
+.mm-repos__sidebar {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -49,6 +32,6 @@ mm-app {
   box-shadow: 0 0 7px lightslategray;
 }
 
-.mm-app__sidebar--active {
+.mm-repos__sidebar--active {
   transform: translate(-100%, 0);
 }

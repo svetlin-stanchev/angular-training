@@ -19,12 +19,16 @@
 
   /* @ngInject */
   function routingConfig($urlRouterProvider, $stateProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/repos');
 
     $stateProvider
-      .state('contributors', {
+      .state('repos', {
+        url: '/repos',
+        template: `<mm-repos></mm-repos>`
+      })
+      .state('repos.contributors', {
         url: '/contributors',
-        template: `<mm-contributors repo="$ctrl.activeRepo"></mm-contributors>`
+        template: `<mm-contributors repo="$ctrl.activeRepo" on-close="$ctrl.closeRepoData()"></mm-contributors>`
       });
   }
 

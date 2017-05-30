@@ -4,7 +4,8 @@
   angular.module('MMApp.contributors')
     .component('mmContributors', {
       bindings: {
-        repo: '<'
+        repo: '<',
+        onClose: '&'
       },
       controller: MmContributorsController,
       templateUrl: 'app/contributors/contributors.component.html'
@@ -31,6 +32,7 @@
     };
 
     $ctrl.onSidebarClose = () => {
+      $ctrl.onClose();
       $state.go('^');
     };
   }

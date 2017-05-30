@@ -12,23 +12,6 @@
   function MmAppController($state, repoService) {
     var $ctrl = this;
 
-    $ctrl.$onInit = () => {
-      $ctrl.repos = [];
-      $ctrl.activeRepo = null;
-
-      repoService.get('/orgs/angular/repos')
-        .then((res) => {
-          $ctrl.repos = res;
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    };
-
-    $ctrl.openRepoData = (repo) => {
-      $ctrl.activeRepo = repo;
-
-      $state.go('contributors');
-    };
+    $ctrl.$onInit = () => {};
   }
 })();

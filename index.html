@@ -6,10 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link href="assets/css/style.css" rel="stylesheet">-->
-  <link href="app/app.css" rel="stylesheet">
-  <link href="app/header/header.css" rel="stylesheet">
-  <link href="app/shared/close-button.css" rel="stylesheet">
-  <link href="app/contributors/contributors.css" rel="stylesheet">
+  <link href="app/app.component.css" rel="stylesheet">
+  <link href="app/header/header.component.css" rel="stylesheet">
+  <link href="app/shared/close-button.component.css" rel="stylesheet">
+  <link href="app/repos/repos.component.css" rel="stylesheet">
+  <link href="app/repos/contributors/contributors.component.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,17 +27,21 @@
 
   <!-- SHARED -->
   <script src="app/shared/background-image.directive.js"></script>
-  <script src="app/shared/repo.service.js"></script>
-  <script src="app/shared/repo.model.js"></script>
   <script src="app/shared/rest-api.service.js"></script>
-  <script src="app/shared/contributor.service.js"></script>
-  <script src="app/shared/contributor.model.js"></script>
   <script src="app/shared/http.interceptor.js"></script>
   <script src="app/shared/close-button.component.js"></script>
 
+  <!-- REPOS -->
+  <script src="app/repos/repos.module.js"></script>
+  <script src="app/repos/repos.component.js"></script>
+  <script src="app/repos/repo.service.js"></script>
+  <script src="app/repos/repo.model.js"></script>
+
   <!-- CONTRIBUTORS -->
-  <script src="app/contributors/contributors.module.js"></script>
-  <script src="app/contributors/contributors.component.js"></script>
+  <script src="app/repos/contributors/contributors.module.js"></script>
+  <script src="app/repos/contributors/contributors.component.js"></script>
+  <script src="app/repos/contributors/contributor.service.js"></script>
+  <script src="app/repos/contributors/contributor.model.js"></script>
 
   <!-- HEADER -->
   <script src="app/header/header.component.js"></script>

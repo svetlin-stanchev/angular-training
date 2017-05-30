@@ -8,7 +8,7 @@
         onClose: '&'
       },
       controller: MmContributorsController,
-      templateUrl: 'app/contributors/contributors.component.html'
+      templateUrl: 'app/repos/contributors/contributors.component.html'
     });
 
   /* @ngInject */

@@ -1,6 +1,6 @@
 <header>
   <h4>{{$ctrl.repo.name}}</h4>
-  <div ng-transclude></div>
+  <mm-close-button on-button-click="$ctrl.onSidebarClose()"></mm-close-button>
 </header>
 <main>
   <div mm-background-image="{{$ctrl.repo.owner.avatar_url}}"></div>

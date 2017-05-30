@@ -7,23 +7,31 @@
         repo: '<'
       },
       controller: MmContributorsController,
-      transclude: true,
       templateUrl: 'app/contributors/contributors.component.html'
     });
 
   /* @ngInject */
-  function MmContributorsController(contributorService) {
+  function MmContributorsController($state, contributorService) {
     var $ctrl = this;
 
     $ctrl.$onInit = () => {
       $ctrl.contributors = [];
     }
+
     $ctrl.$onChanges = (obj) => {
       if (obj.repo && $ctrl.repo) {
         contributorService.get($ctrl.repo.full_name)
-          .then((contributors) => { $ctrl.contributors = contributors; })
+          .then((contributors) => {
+            $ctrl.contributors = contributors;
+          })
+          .catch((err) => {
+            console.error(err);
+          });
       }
+    };
 
+    $ctrl.onSidebarClose = () => {
+      $state.go('^');
     };
   }
 })();

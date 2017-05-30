@@ -19,24 +19,15 @@
 
   /* @ngInject */
   function routingConfig($urlRouterProvider, $stateProvider) {
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('home', {
-        url: '/home',
-        template: `<mm-app></mm-app>`
-      })
-      .state('home.contributors', {
+      .state('contributors', {
         url: '/contributors',
-        template: `
-          <mm-contributors ng-class="{'active' : $ctrl.isSidebarActive}" repo="$ctrl.activeRepo">
-            <mm-close-button on-button-click="$ctrl.onSidebarClose()"></mm-close-button>
-          </mm-contributors>
-        `
+        template: `<mm-contributors repo="$ctrl.activeRepo"></mm-contributors>`
       });
   }
 
   /* @ngInject */
-  function appRun() {
-  }
+  function appRun() {}
 })();

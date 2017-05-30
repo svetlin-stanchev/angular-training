@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('MMApp.header')
+  angular.module('MMApp')
     .component('mmHeader', {
       bindings: {},
       controller: MmHeaderController,

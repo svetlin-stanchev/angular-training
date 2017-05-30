@@ -5,14 +5,18 @@
   <title>Angular for back ends</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!--<link href="assets/css/style.css" rel="stylesheet">-->
+  <link href="app/app.css" rel="stylesheet">
 </head>
 
 <body>
-  <ui-view></ui-view>
+  <mm-app></mm-app>
+
+  <!-- VENDORS -->
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
+  <!-- APP -->
   <script src="app/app.module.js"></script>
   <script src="app/app.config.js"></script>
   <script src="app/app.component.js"></script>
@@ -27,12 +31,11 @@
   <script src="app/shared/http.interceptor.js"></script>
   <script src="app/shared/close-button.component.js"></script>
 
-  <!-- SIDEBAR -->
+  <!-- CONTRIBUTORS -->
   <script src="app/contributors/contributors.module.js"></script>
   <script src="app/contributors/contributors.component.js"></script>
 
   <!-- HEADER -->
-  <script src="app/header/header.module.js"></script>
   <script src="app/header/header.component.js"></script>
   <script src="app/header/logo/logo.component.js"></script>
 </body>

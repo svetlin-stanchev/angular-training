@@ -14,25 +14,21 @@
 
     $ctrl.$onInit = () => {
       $ctrl.repos = [];
-      $ctrl.isSidebarActive = false;
       $ctrl.activeRepo = null;
 
       repoService.get('/orgs/angular/repos')
-        .then((res) => { $ctrl.repos = res; })
-        .catch((err) => { console.error(err); });
-    };
-
-    $ctrl.onSidebarClose = () => {
-      $ctrl.isSidebarActive = false;
-      $ctrl.activeRepo = null;
-      $state.go('^');
+        .then((res) => {
+          $ctrl.repos = res;
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     };
 
     $ctrl.openRepoData = (repo) => {
       $ctrl.activeRepo = repo;
-      $ctrl.isSidebarActive = true;
 
-      $state.go('home.contributors');
+      $state.go('contributors');
     };
   }
 })();
